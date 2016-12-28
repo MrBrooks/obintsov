@@ -1,0 +1,32 @@
+.input-text{
+  background-color: @gray-light;
+  appearance: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  border-radius: 17px;
+  padding: 8px 15px;
+  line-height: 1;
+  transition: all 500ms;
+  width: 100%;
+  //max-width: 300px;
+  &:active, &:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: @pink;
+  }
+}
+form{
+  text-align: center;
+}
+.field{
+  margin-bottom: 20px;
+  text-align: left;
+  label{
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+}
+.btn[type="submit"]{
+  margin:  auto;
+}
