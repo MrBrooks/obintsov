@@ -1,0 +1,18 @@
+/* TEAM */
+	Developer: Denis Kulikov
+	Site: vk.com/altingfest
+	Contact: altingfest [at] gmail.com
+	From: Saint-Petersburg, Russia
+	Location: Saint-Petersburg, Russia
+
+/* THANKS */
+
+  company: MrBrooks
+
+/* SITE */
+	Language: Russian
+	Doctype:HTML5
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery, Bootstrap etc.
+	IDE: Sublime, Gulp, Git, GitHub Pages
+    Software: Software used for the development
