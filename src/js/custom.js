@@ -9,6 +9,8 @@ $(document).ready(function() {
   // mythMenu();
   Popup();
   mainPageInteractive();
+  var myth_menu = new MythMenuControll();
+  var adaptive_images = new AdaptiveImages();
 
   var pockets = new AnimOnScroll({
     selector: ".pocket-up, .fade-in",
@@ -21,20 +23,14 @@ $(document).ready(function() {
       event: "scroll",
       actions: [
         pockets.updateView,
-        // logo.update,
-        // video_control.update,
-        // video_play.scrollControl,
-        // econtenta_pixel.checkScrollConditions,
-        // menu.update
+        myth_menu.update
       ]
     },
     {
       event: "resize",
       actions: [
         pockets.updateItems,
-        // logo.resize,
-        // window_max_width.update,
-        // full_height.update
+        adaptive_images.update
       ]
     }
   ]);
@@ -42,26 +38,7 @@ $(document).ready(function() {
   $(window).trigger('scroll');
 });
 
-function mythMenu(){
-  var menu, open, close;
 
-  function init(){
-    menu = $("#myth-menu");
-    open = $("#myth-menu-open");
-    close = $("#myth-menu-close");
-    open.on('click', openMenu);
-    close.on('click', closeMenu);
-  }
-
-  function openMenu(){
-    menu.addClass('active');
-  }
-  function closeMenu(){
-    menu.removeClass('active');
-  }
-
-  init();
-}
 
 function Popup(options){
   var def = {
@@ -109,7 +86,7 @@ function mainPageInteractive(){
   }
 
   function showGrid(){
-    btn.removeClass('visible');
+    btn.removeClass('visible').css('opacity','0');
     main.css('height', $(window).height());
     main.addClass('auto-height');
     setTimeout(function(){
@@ -119,7 +96,7 @@ function mainPageInteractive(){
   function chahgeText(){
     text.removeClass('visible');
     setTimeout(function(){
-      text.children().text('Каждый миф – заблуждения, с которыми мы сталкиваемся каждый день в журналах, по телевизору, в разговорах с подругой.');
+      text.children().html('Каждый миф – заблуждения, с которыми мы сталкиваемся каждый день в журналах, <br> по телевизору, в разговорах с подругой.');
       text.addClass('visible');
       showGrid();
     },500);
@@ -127,17 +104,6 @@ function mainPageInteractive(){
 
   init();
 }
-
-// function PocketAnim(){
-//   var pockets;
-//
-//   function init(){
-//     pockets = $('.pocket-up');
-//
-//   }
-//
-//   init();
-// }
 function WindowUpdater(opts){
   var self = this, timer;
 
@@ -196,7 +162,7 @@ function AnimOnScroll(options){
 
   function isVisible(elem){
     var ws = $(window).scrollTop();
-    if( ((elem.top > ws) && (elem.top < ws+H)) || (elem.top + elem.height > ws && elem.top < ws)){
+    if( ((elem.top >= ws) && (elem.top <= ws+H)) || (elem.top + elem.height >= ws && elem.top <= ws)){
       return true;
     }
     return false;
@@ -253,4 +219,57 @@ function AnimOnScroll(options){
   if(if_mobile){
     select.addClass(opt.visible);
   }
+}
+function MythMenuControll(){
+  var menu = $("#myth-menu-open");
+  var trigger_height = 100, self = this, active = "add-bg";
+
+  self.update = function(){
+    if($(window).scrollTop() > trigger_height){
+      menu.addClass(active);
+    } else{
+      menu.removeClass(active);
+    }
+  };
+
+  self.rebuild = function(){
+    menu = $("#myth-menu-open");
+  };
+}
+
+function AdaptiveImages(){
+  var images, mobile_start = 768, self = this;
+
+  function init(){
+    images = $("[data-src-desktop]");
+    self.update();
+  }
+
+  this.update = function(){
+    var w = $(window).width();
+    if( w <= mobile_start) {
+      images.map(loadMobile);
+    } else{
+      images.map(loadDesktop);
+    }
+  };
+
+  this.rebuild = function(){
+    init();
+  };
+  function loadMobile(){
+    var src = $(this).attr("data-src-mobile");
+    if( src ){
+      $(this).attr('src', src);
+    }
+  }
+
+  function loadDesktop(){
+    var src = $(this).attr("data-src-desktop");
+    if( src ){
+      $(this).attr('src', src);
+    }
+  }
+
+  init();
 }

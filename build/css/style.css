@@ -2370,7 +2370,7 @@ a
 }
 a:hover
 {
-    text-decoration: underline;
+    text-decoration: none;
 
     color: #d1175d;
 }
@@ -2386,6 +2386,7 @@ a.white:hover
 }
 footer
 {
+    margin: 0 15px 15px;
     padding: 15px;
 
     background-color: #fff;
@@ -2414,7 +2415,7 @@ footer .iflex
 }
 .hr-footer
 {
-    max-width: 600px;
+    max-width: 66%;
     margin: auto;
 
     border-color: #282828;
@@ -2546,6 +2547,14 @@ footer .iflex
 .block
 {
     display: block;
+}
+.blue
+{
+    color: #0089a9;
+}
+.underline:hover
+{
+    text-decoration: underline;
 }
 .btn
 {
@@ -2680,6 +2689,105 @@ form
 {
     opacity: 1;
 }
+#ajax-loader
+{
+    position: fixed;
+    z-index: 2000;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+
+    background-color: #d8385f;
+}
+#ajax-loader.left
+{
+    left: -100%;
+}
+#ajax-loader.right
+{
+    left: 100%;
+}
+#ajax-loader.active
+{
+    left: 0;
+}
+@-webkit-keyframes shake
+{
+    10%,
+    90%
+    {
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+    }
+    20%,
+    80%
+    {
+        -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+    }
+    30%,
+    50%,
+    70%
+    {
+        -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg);
+    }
+    40%,
+    60%
+    {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+}
+@keyframes shake
+{
+    10%,
+    90%
+    {
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+    }
+    20%,
+    80%
+    {
+        -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+    }
+    30%,
+    50%,
+    70%
+    {
+        -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg);
+    }
+    40%,
+    60%
+    {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+}
+.shake
+{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.shake:hover
+{
+    -webkit-animation: shake 800ms 1 cubic-bezier(.36, .07, .19, .97) both;
+            animation: shake 800ms 1 cubic-bezier(.36, .07, .19, .97) both;
+}
+span:hover + .shake
+{
+    -webkit-animation: shake 800ms 1 cubic-bezier(.36, .07, .19, .97) both;
+            animation: shake 800ms 1 cubic-bezier(.36, .07, .19, .97) both;
+}
 /* PAGES */
 #main-page
 {
@@ -2694,8 +2802,7 @@ form
             transition: all 500ms;
 
     color: #fff;
-    background-color: #d1596d;
-    background-image: url(http://placehold.it/1920x1080/d1596d/d1596d);
+    background-color: #d8385f;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -2712,7 +2819,7 @@ form
 #main-page.auto-height
 {
     height: 100%;
-    padding-bottom: 150px;
+    padding-bottom: 110px;
 }
 #main-page.auto-height .step2
 {
@@ -2858,14 +2965,17 @@ form
 
     text-align: right;
 }
-.socials a div:hover
+.socials a div
 {
     -webkit-transition: all 250ms cubic-bezier(0, 0, .16, 1.03);
             transition: all 250ms cubic-bezier(0, 0, .16, 1.03);
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
+}
+.socials a div:hover
+{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
 }
 .socials .block
 {
@@ -2893,6 +3003,8 @@ form
 {
     position: relative;
 
+    overflow: hidden;
+
     max-width: 30%;
     height: 300px;
     margin-bottom: 25px;
@@ -2905,10 +3017,6 @@ form
 
     color: #fff;
     background-color: #5e212c;
-    background-image: url(http://placehold.it/400x600);
-    background-repeat: no-repeat;
-    background-position: 50%  300px;
-    background-size: cover;
     box-shadow: 0 7px 12.61px .39px rgba(108, 31, 45, .56);
 }
 @media screen and (max-width: 767px)
@@ -2919,13 +3027,23 @@ form
         max-width: 100%;
     }
 }
-.myth-card:hover
+.myth-card a
 {
-    background-position: 50%  50%;
+    -webkit-transition: none;
+            transition: none;
+
+    color: inherit;
 }
 .myth-card:hover:nth-child(even)
 {
     color: #fff;
+}
+.myth-card:hover .background
+{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+
+    opacity: 1;
 }
 .myth-card:nth-child(even)
 {
@@ -2938,17 +3056,24 @@ form
     font-weight: 700;
     line-height: 1.2;
 
+    position: relative;
+    z-index: 2;
+
     margin-top: 15px;
 }
 .myth-card .number
 {
     font-size: 12px;
 
+    position: relative;
+    z-index: 2;
+
     text-transform: uppercase;
 }
 .myth-card .more
 {
     position: absolute;
+    z-index: 2;
     bottom: 30px;
     left: 20px;
 
@@ -2978,6 +3103,27 @@ form
             transform: rotate(180deg);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
+}
+.myth-card .background
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 300px;
+
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+
+    opacity: 0;
+    background-image: url(http://placehold.it/400x600);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 }
 .banner-block
 {
@@ -3052,17 +3198,26 @@ form
 
     display: inline-block;
 
+    margin-top: 2px;
     margin-right: 10px;
 
     -webkit-transition: all 500ms;
             transition: all 500ms;
     vertical-align: top;
 }
-.nav-block .myth-menu-btn--open
+.nav-block .book
 {
     position: absolute;
     top: 15px;
     right: 15px;
+}
+.nav-block .myth-menu-btn--open
+{
+    line-height: 1;
+
+    position: fixed;
+    top: 30px;
+    right: 30px;
 }
 @media screen and (max-width: 767px)
 {
@@ -3074,9 +3229,16 @@ form
         float: right;
 
         width: 50%;
-        padding: 24px 0;
+        padding: 26px 0;
 
         background-color: #f3367d;
+    }
+}
+@media screen and (min-width: 1366px)
+{
+    .nav-block .myth-menu-btn--open
+    {
+        right: calc(50vw - 683px + 30px);
     }
 }
 .nav-block .title
@@ -3090,7 +3252,16 @@ form
 {
     position: relative;
 
+    margin: 15px 15px 0;
+
     background-color: #fff;
+}
+@media screen and (max-width: 767px)
+{
+    .long-page
+    {
+        margin: 0;
+    }
 }
 .long-page h1
 {
@@ -3194,10 +3365,12 @@ form
 {
     display: inline-block;
 
+    margin-top: 3px;
     margin-right: 10px;
 
     -webkit-transition: all 500ms;
             transition: all 500ms;
+    vertical-align: top;
 }
 .long-page .next
 {
@@ -3228,10 +3401,12 @@ form
 {
     display: inline-block;
 
+    margin-top: 3px;
     margin-left: 10px;
 
     -webkit-transition: all 500ms;
             transition: all 500ms;
+    vertical-align: top;
 }
 .book
 {
@@ -3246,6 +3421,18 @@ form
     display: inline-block;
 
     margin-left: 10px;
+
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.share-btns div:hover
+{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
 }
 .long-read-block
 {
@@ -3395,11 +3582,15 @@ form
 }
 .myth-menu-btn
 {
+    line-height: 1;
+
     position: absolute;
     top: 15px;
     right: 15px;
 
     cursor: pointer;
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
 
     color: #fff;
 }
@@ -3407,13 +3598,15 @@ form
 {
     display: inline-block;
 
-    vertical-align: top;
+    margin-right: 15px;
+
+    vertical-align: middle;
 }
 .myth-menu-btn > div
 {
     display: inline-block;
 
-    vertical-align: top;
+    vertical-align: middle;
 }
 .myth-menu-btn--close
 {
@@ -3427,6 +3620,22 @@ form
     {
         top: 15px;
         right: 15px;
+    }
+}
+.myth-menu-btn.add-bg
+{
+    top: 0;
+    right: 15px;
+
+    padding: 15px;
+
+    background-color: #f3367d;
+}
+@media screen and (min-width: 1366px)
+{
+    .myth-menu-btn.add-bg
+    {
+        right: calc(50vw - 683px + 15px);
     }
 }
 .bars .bar
@@ -3476,7 +3685,7 @@ form
             transition: all 500ms;
 
     color: #fff;
-    background-color: #f3367d;
+    background-color: #d8385f;
 }
 @media screen and (max-width: 767px)
 {
@@ -3484,7 +3693,7 @@ form
     {
         text-align: center;
 
-        background-color: #d1596d;
+        background-color: #d8385f;
     }
 }
 .myth-menu.active
@@ -3591,6 +3800,7 @@ form
 }
 .term
 {
+    margin-bottom: 50px;
     padding-bottom: 15px;
 
     border-bottom: 1px solid black;
