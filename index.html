@@ -72,50 +72,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <!-- PRELOADER STYLE -->
     <style>
-        @-webkit-keyframes pulse {
-          from {
-            -webkit-transform: scale(1);
-                    transform: scale(1);
-          }
-          to {
-            -webkit-transform: scale(1.2);
-                    transform: scale(1.2);
-          }
-        }
-        @keyframes pulse {
-          from {
-            -webkit-transform: scale(1);
-                    transform: scale(1);
-          }
-          to {
-            -webkit-transform: scale(1.2);
-                    transform: scale(1.2);
-          }
-        }
-        .preloader {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          text-align: center;
-          display: table;
-          z-index: 9999;
-          background-color: #fff;
-          -webkit-transition: all 1000ms;
-          transition: all 1000ms;
-          -webkit-transform-origin: center;
-                  transform-origin: center;
-          -webkit-animation: pulse 1000ms cubic-bezier(0, 0, 0.26, 0.95) infinite alternate;
-                  animation: pulse 1000ms cubic-bezier(0, 0, 0.26, 0.95) infinite alternate;
-        }
-        .preloader.uppp {
-          top: -200%;
-        }
-        .preloader > div {
-          display: table-cell;
-          vertical-align: middle;
-        }
+        
     </style>
 </head>
 
@@ -124,8 +81,12 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-        <header>
-
+        <div id="preloader"></div>
+<div id="ajax-loader" class="">
+  
+</div>
+<header>
+  
 </header>
 
         <main>
@@ -157,7 +118,7 @@
         <div  class="descr">
           <div id="change-text" class="pocket-up">
             <div>
-              За последние 100 лет под влиянием массовой культуры размер женской груди увеличился втрое, а рак груди помолодел на десятки лет.
+              За последние 100 лет под влиянием массовой культуры размер женской груди увеличился втрое,<br>а рак груди помолодел на десятки лет.
             </div>
           </div>
         </div>
@@ -176,108 +137,144 @@
         <div class="myth-grid">
           <div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="kit-long-read.html" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
-            </div>
-            <div class="myth-card">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
             <div class="myth-card fade-in">
-              <div class="number">Миф №1</div>
-              <div class="title">«От рака груди умирают быстро»</div>
-              <div class="more">
-                <span><a href="kit-long-read.html">Реальность</a></span>
-                <span class="icon"><div class="svg-sprite--back"></div></span>
-              </div>
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
+            </div>
+            <div class="myth-card fade-in">
+              <a href="" class="block">
+                <div class="number">Миф №1</div>
+                <div class="title">«От рака груди умирают быстро»</div>
+                <div class="more">
+                  <span>Реальность</span>
+                  <span class="icon"><div class="svg-sprite--back"></div></span>
+                </div>
+                <div class="background"></div>
+              </a>
             </div>
           </div>
         </div>
         <div class="banner-block">
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 pocket-up">
-              <h2>Если у вас есть вопросы или нужна консультация врача – запишитесь на приём</h2>
-              <button class="btn btn--pink popup-open" data-target="#book-popup">Записаться на приём</button>
+            <div class="col-md-6 col-md-offset-3">
+              <div class="pocket-up"><h2>Если у вас есть вопросы или нужна консультация врача – запишитесь на приём</h2></div>
+              <button class="btn btn--pink fade-in popup-open" data-target="#book-popup">Записаться на приём</button>
             </div>
           </div>
         </div>
