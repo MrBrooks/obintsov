@@ -70,8 +70,10 @@
   }
   h1{
     font-size: 36px;
+    font-weight: 700;
     @media screen and (max-width: @mobile){
       font-size: 22px;
+
     }
   }
   h2{
@@ -194,6 +196,7 @@
   }
   .row{
     position: absolute;
+    width: 100%;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -212,6 +215,14 @@
     text-align: center;
   }
 
+}
+
+.video-block{
+  text-align: center;
+  iframe{
+    margin: auto;
+    border: 0;
+  }
 }
 
 .share-block{
@@ -423,4 +434,7 @@
   .content{
 
   }
+}
+#share{
+  display: none;
 }

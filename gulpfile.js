@@ -21,6 +21,7 @@ var gulp = require('gulp'), // Task runner
     lessReporter = require('gulp-less-reporter'), // Error reporter for gulp-less
     autoprefixer = require('gulp-autoprefixer'), // Prefix CSS
     csscomb = require('gulp-csscomb'), // Coding style formatter for CSS
+    babel = require('gulp-babel'), //use modern js
     minifycss = require('gulp-minify-css'), // Minify CSS
     uglify = require('gulp-uglify'), // Minify JS
     jshint = require('gulp-jshint'), // JS code linter
@@ -142,6 +143,9 @@ gulp.task('js', function () {
 gulp.task('js-custom',function(){
     return gulp.src(projectPath.src.jsCustom)
         .pipe(rigger())
+        // .pipe(babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
         .pipe(size({title: 'Custom JavaScript'}))
