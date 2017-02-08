@@ -17,7 +17,7 @@
   width: 100%;
   background-color: @raspberry;
   position: relative;
-  min-height: 460px;
+  min-height: 100vh;
   padding-top: 300px;
   color: @white;
   transition: all 500ms;
@@ -30,14 +30,13 @@
     background-image: url(../img/images/banner_mobile.jpg);
   }
   &.auto-height{
-    height: 100%;
+    height: auto;
+    //min-height: 100vh;
     padding-bottom: 110px;
     @media screen and (max-width: @mobile){
       background-image: none;
     }
     .step2{
-      height: 1648px;
-      top: 0;
       @media screen and (max-width: @mobile){
         height: auto;
         //padding-bottom: 200px;
@@ -53,11 +52,12 @@
     }
   }
   .step2{
-    position: relative;
-    top: 50px;
-    height: 0;
-    overflow: hidden;
-    transition: all 1500ms;
+    // position: relative;
+    // top: 50px;
+    // height: 0;
+    display: none;
+    // overflow: hidden;
+    // transition: all 1500ms;
   }
   .content{
     //padding-top: 100px;
@@ -247,6 +247,10 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    @media screen and (max-width: @mobile){
+      background: none !important;
+      display: none !important;
+    }
   }
 }
 .banner-block{

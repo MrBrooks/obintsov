@@ -1746,7 +1746,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -2px -2px;
-    background-size: 190px 168px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--logo
 {
@@ -1760,7 +1760,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -2px -50px;
-    background-size: 190px 168px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--logo_pink
 {
@@ -1774,9 +1774,23 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -2px -98px;
-    background-size: 190px 168px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--logo_blue
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--done
+{
+    width: 53px;
+    height: 53px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -168px -2px;
+    background-size: 223px 186px;
+}
+.no-svg .svg-sprite--done
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1787,24 +1801,10 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -2px -139px;
-    background-size: 190px 168px;
+    background-position: -168px -57px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--google_share
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--twitter_share
-{
-    width: 26px;
-    height: 26px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -31px -139px;
-    background-size: 190px 168px;
-}
-.no-svg .svg-sprite--twitter_share
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1815,24 +1815,24 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -59px -139px;
-    background-size: 190px 168px;
+    background-position: -168px -86px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--ok_share
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--fb_share
+.svg-sprite--twitter_share
 {
     width: 26px;
-    height: 25px;
+    height: 26px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -87px -139px;
-    background-size: 190px 168px;
+    background-position: -2px -139px;
+    background-size: 223px 186px;
 }
-.no-svg .svg-sprite--fb_share
+.no-svg .svg-sprite--twitter_share
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1843,24 +1843,52 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -115px -139px;
-    background-size: 190px 168px;
+    background-position: -30px -139px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--vk_share
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--inst_pink
+.svg-sprite--fb_share
+{
+    width: 26px;
+    height: 25px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -58px -139px;
+    background-size: 223px 186px;
+}
+.no-svg .svg-sprite--fb_share
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--vk
 {
     width: 20px;
     height: 20px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -145px -98px;
-    background-size: 190px 168px;
+    background-position: -197px -57px;
+    background-size: 223px 186px;
 }
-.no-svg .svg-sprite--inst_pink
+.no-svg .svg-sprite--vk
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--fb
+{
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -196px -86px;
+    background-size: 223px 186px;
+}
+.no-svg .svg-sprite--fb
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1871,8 +1899,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -142px -139px;
-    background-size: 190px 168px;
+    background-position: -168px -114px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--inst
 {
@@ -1885,38 +1913,10 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -2px;
-    background-size: 190px 168px;
+    background-position: -190px -114px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--fb_pink
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--fb
-{
-    width: 20px;
-    height: 20px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -168px -24px;
-    background-size: 190px 168px;
-}
-.no-svg .svg-sprite--fb
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--vk
-{
-    width: 20px;
-    height: 20px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -168px -46px;
-    background-size: 190px 168px;
-}
-.no-svg .svg-sprite--vk
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1927,10 +1927,24 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -68px;
-    background-size: 190px 168px;
+    background-position: -145px -98px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--vk_pink
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--inst_pink
+{
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -85px -139px;
+    background-size: 223px 186px;
+}
+.no-svg .svg-sprite--inst_pink
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -1941,8 +1955,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -90px;
-    background-size: 190px 168px;
+    background-position: -145px -120px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--left
 {
@@ -1955,8 +1969,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -107px;
-    background-size: 190px 168px;
+    background-position: -107px -139px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--right
 {
@@ -1969,8 +1983,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -124px;
-    background-size: 190px 168px;
+    background-position: -2px -167px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--cross
 {
@@ -1983,8 +1997,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -168px -143px;
-    background-size: 190px 168px;
+    background-position: -21px -167px;
+    background-size: 223px 186px;
 }
 .no-svg .svg-sprite--back
 {
@@ -2581,6 +2595,10 @@ footer .iflex
 {
     display: none;
 }
+.popup .svg-sprite--done
+{
+    margin: auto;
+}
 .block
 {
     display: block;
@@ -2857,7 +2875,7 @@ span:hover + .shake
 
     width: 100%;
     height: 100vh;
-    min-height: 460px;
+    min-height: 100vh;
     padding-top: 300px;
 
     -webkit-transition: all 500ms;
@@ -2884,7 +2902,7 @@ span:hover + .shake
 }
 #main-page.auto-height
 {
-    height: 100%;
+    height: auto;
     padding-bottom: 110px;
 }
 @media screen and (max-width: 767px)
@@ -2893,12 +2911,6 @@ span:hover + .shake
     {
         background-image: none;
     }
-}
-#main-page.auto-height .step2
-{
-    top: 0;
-
-    height: 1648px;
 }
 @media screen and (max-width: 767px)
 {
@@ -2922,15 +2934,7 @@ span:hover + .shake
 }
 #main-page .step2
 {
-    position: relative;
-    top: 50px;
-
-    overflow: hidden;
-
-    height: 0;
-
-    -webkit-transition: all 1500ms;
-            transition: all 1500ms;
+    display: none;
 }
 #main-page .content
 {
@@ -3209,6 +3213,15 @@ span:hover + .shake
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+@media screen and (max-width: 767px)
+{
+    .myth-card .background
+    {
+        display: none !important;
+
+        background: none !important;
+    }
 }
 .banner-block
 {
@@ -3816,9 +3829,17 @@ span:hover + .shake
 {
     color: #fff;
 }
+.myth-menu a:hover
+{
+    text-decoration: underline;
+}
 .myth-menu .link
 {
     margin-bottom: 35px;
+}
+.myth-menu .link:hover
+{
+    text-decoration: underline;
 }
 .right-popup
 {

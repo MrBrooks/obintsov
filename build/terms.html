@@ -104,7 +104,7 @@
             transform: translate3d(100%, 0, 0);
         }
         #preloader .logo {
-            position: fixed;
+            position: absolute;
             margin: auto;
             top: 0;
             bottom: 0;
@@ -341,7 +341,8 @@
                 <button type="submit" class="btn btn--pink">Записаться</button>
             </form>
         </div>
-        <div id="succsess-message">
+        <div id="succsess-message" class="content">
+            <div class="svg-sprite--done"></div>
             <div class="popup-title">Готово</div>
             <p>Запись создана. С вами свяжется администратор и назначит удобную для вас дату приёма.</p>
             <button class="btn btn--pink popup-close">ЗАКРЫТЬ ОКНО</button>

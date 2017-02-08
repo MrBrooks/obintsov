@@ -125,10 +125,12 @@ function mainPageInteractive(){
 
   function showGrid(){
     btn.removeClass('visible').css('opacity','0');
-    main.css('height', $(window).height());
+    // main.css('min-height','100vh');
+    // main.css('height', 'auto');
     main.addClass('auto-height');
+    $(".step2").slideDown(1000);
     setTimeout(function(){
-      main.css('height', '');
+      // main.css('height', '');
     },300);
   }
   function chahgeText(){
